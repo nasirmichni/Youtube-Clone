@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff0000; /* YouTube red */
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.video {
+    margin-bottom: 30px;
+}
+
+.video iframe {
+    width: 100%; /* Make videos responsive */
+    height: 175px; /* Adjust height for smaller videos */
+}
+
+.video-big iframe {
+    height: 315px; /* Height for big video */
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four videos in one row */
+    grid-gap: 20px;
+}
+
+.footer {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two videos in one row */
+    }
+    
+    .video iframe {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+    
+    .video-big iframe {
+        height: 300px; /* Height for big video on smaller screens */
+    }
+}
